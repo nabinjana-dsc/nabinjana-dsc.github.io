@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 30px;
+}
+
+img {
+    height: 400px;
+    filter: hue-rotate(90deg);
+}
+
+
+/* <filter-function> values */
+/*
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
+*/
+
+/* URL */
+/*
+filter: url("filters.svg#filter-id");
+*/
+
+/* Multiple filters */
+/*
+filter: contrast(175%) brightness(3%);
+filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
+*/
+
+/* Use no filter */
+/*
+filter: none;
+*/
+
+/* Global values */
+/*
+filter: inherit;
+filter: initial;
+filter: revert;
+filter: revert-layer;
+filter: unset;
+*/
+
+.shape {
+    height: 300px;
+    width: 300px;
+    background-color: red; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+#box {
+    height: 380px;
+    width: 300px;
+    background-color: rgb(73, 203, 243);
+    overflow: hidden;
+}
+
+#box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+
+#box:hover img {
+    scale: 1.2;
+}
+
+#btn {
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 12px 20px;
+    margin: 50px;
+    border: none;
+    color: #fff;
+    background-color: lightseagreen;
+    transition: all ease 0.5s;
+}
+
+#btn:hover {
+    box-shadow: 5px 5px 10px #000;
+}
+
+#boxcolor {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to right bottom, red, blue);
+}
+
+#gola {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /*border: 2px solid red;*/
+    background: linear-gradient(yellow, orange, rgb(89, 204, 233), purple, blue);
+    padding: 10px;
+}
+
+#gola img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#img {
+    filter: drop-shadow(10px 10px 20px rgb(92, 91, 91));
+}
+
+h1 {
+    font-size: 110px;
+    font-weight: 900;
+    -webkit-text-stroke: 4px #000;
+    color: transparent;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px solid #000;
+}
+
+body::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(red, blue, green);
+    border-radius: 20px;
+}
+
+body {
+    padding: 50px;
+}
+
+#loader {
+    height: 100px;
+    width: 100px;
+    /*background-color: red;*/
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    border-top-color: #333;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        rotate: 306deg;
+    }
+}
+
+h2 {
+    font-family: 900;
+    position: relative;
+    font-size: 5rem;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 0%;
+    background-color: #333;
+    transition: all ease 1s;
+}
+
+h2:hover::after {
+    width: 33%;
+}
+
+
+h2::selection{   /*Pseudo selectors*/
+    color: red;
+    background-color: #000;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+h3 span {
+    font-style: italic;
+    color: yellow;
+}
+
+h3 span #color {
+    color: red;
+    font-style: normal;
+}
+
+
+#virtual {
+    font-size: 100px;
+}
+
+#virtual::after {
+    content:"NABIN";
+    color: red;
+}
+
+#boxs {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(0, 255, 162);
+}
+
+#boxs::after {
+    content:" World!";
+}
+
+#boxs::before {
+    content: "World ";
+}
+
+h1:nth-child(2n) {
+    color: red;
+}
+
+#btns {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 50px;
+    border: none;
+    color: #fff;
+    background-color: lightseagreen;
+    transition: all ease 0.2s;
+}
+
+#btns:active {
+    scale: 1.3;
+}
+
+#bx {                   /*Dribble Effect*/
+    height: 180px;
+    width: 275px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNaKwdjcdDyDUsxKv8wbror4KeCPlxjjRXOy8iLfuC2PfIeU8Hp6qsPobJXRQHVoSq24A&usqp=CAU);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#bottom {
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    bottom: -40%;
+    transition: all ease 0.5s;
+}
+
+#bx:hover #bottom {
+    bottom: 0;
+}
+
+#parent {
+    background-color: lightblue;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.child {
+    height: 300px;
+    width: 300px;
+    background-color: salmon;
+    margin: 10px;
+    display: inline-block;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+h4 {                                                            /*Not useable*/
+    font-weight: 900;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-stretch: expanded;
+}
+
+h4:hover {                                                      /*Not useable*/
+    font-stretch: ultra-expanded;
+    color: red;
+}
+
+#webkit {
+    height: 390px;
+    width: 400px;
+    object-fit: cover;
+    object-position: top;
+    -webkit-mask-image: url(images/black-splatter-png.png);
+    -webkit-mask-size: contain;
+}
+
